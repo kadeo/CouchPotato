@@ -57,7 +57,7 @@
 		<span class="year">${movie.year}</span>
 		<span class="quality"></span>
 		<span class="info">
-			<a href="http://www.imdb.com/title/${movie.imdb}/" class="imdb" target="_blank"></a>
+			<a href="http://www.imdb.fr/title/${movie.imdb}/" class="imdb" target="_blank"></a>
 			<a ${'href="http://www.themoviedb.org/movie/%s"' % str(movie.movieDb) if movie.movieDb else ''} target="_blank" class="moviedb ${'disabled' if not movie.movieDb else ''}"></a>
 			<a class="forceCheck" href="${url(controller='cron', action='forceSingle', id=movie.id)}" title="Force search/refresh info"></a>
 			<a class="delete" href="${url(controller='movie', action='delete', id=movie.id)}" title="Remove: ${movie.name} (${movie.year})"></a>
