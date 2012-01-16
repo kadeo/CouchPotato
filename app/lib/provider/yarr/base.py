@@ -201,7 +201,7 @@ class nzbBase(rss):
     def checkIMDB(self, haystack, imdbId):
 
         for string in haystack:
-            if 'imdb.com/title/' + imdbId in string:
+            if 'imdb.fr/title/' + imdbId in string:
                 return True
 
         return False
