@@ -262,7 +262,7 @@ sharethetv = (function(){
     }
 
     function getId(){
-        var pattern = /imdb\.com\/title\/tt(\d+)/;
+        var pattern = /imdb\.fr\/title\/tt(\d+)/;
         var html = document.getElementsByTagName('html')[0].innerHTML;
         var imdb_id = html.match(pattern)[1];
         return 'tt'+imdb_id;
@@ -295,7 +295,7 @@ moviemeter = (function(){
     }
 
     function getId(){
-        var pattern = /imdb\.com\/title\/tt(\d+)/;
+        var pattern = /imdb\.fr\/title\/tt(\d+)/;
         var html = document.getElementsByTagName('html')[0].innerHTML;
         var imdb_id = html.match(pattern)[1];
         return 'tt'+imdb_id;
@@ -328,7 +328,7 @@ whiwa = (function(){
     }
 
     function getId(){
-        var pattern = /imdb\.com\/title\/tt(\d+)/;
+        var pattern = /imdb\.fr\/title\/tt(\d+)/;
         var html = document.getElementsByTagName('html')[0].innerHTML;
         var imdb_id = html.match(pattern)[1];
         return 'tt'+imdb_id;
@@ -508,7 +508,7 @@ youtheater = (function(){
      *
      */
     function getId() {
-        var pattern = /imdb\.com\/title\/tt(\d+)/;
+        var pattern = /imdb\.fr\/title\/tt(\d+)/;
         var html = document.getElementsByTagName('html')[0].innerHTML;
         var imdb_id = html.match(pattern)[1];
         return 'tt'+imdb_id;
