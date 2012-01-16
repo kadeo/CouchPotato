@@ -1,6 +1,8 @@
 // ==UserScript==
 // @name        CouchPotato UserScript
 // @description Add movies to your CouchPotato via external sites like IMDB
+// @include     http*://*.imdb.fr/title/tt*
+// @include     http*://imdb.fr/title/tt*
 // @include     http*://*.imdb.com/title/tt*
 // @include     http*://imdb.com/title/tt*
 // @include     ${host}*
