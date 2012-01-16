@@ -104,7 +104,7 @@ class MetaGen():
             pass
 
         try:
-            originaltitle = SubElement(nfoxml, 'originaltitel')
+            originaltitle = SubElement(nfoxml, 'originaltitle')
             originaltitle.text = self.tmdb_data['original_name']
         except:
             pass
@@ -129,6 +129,12 @@ class MetaGen():
 
         try:
             plot = SubElement(nfoxml, 'outline')
+            plot.text = self.tmdb_data['overview']
+        except:
+            pass
+        
+        try:
+            plot = SubElement(nfoxml, 'plot')
             plot.text = self.tmdb_data['overview']
         except:
             pass
@@ -234,7 +240,7 @@ class MetaGen():
         return True
 
     def _get_tmdb_imdb(self):
-        url = "http://api.themoviedb.org/2.1/Movie.imdbLookup/en/json/%s/%s" % (__tmdb_apikey__, "tt" + self.imdbid)
+        url = "http://api.themoviedb.org/2.1/Movie.imdbLookup/fr/json/%s/%s" % (__tmdb_apikey__, "tt" + self.imdbid)
 
         count = 0
         while 1:
