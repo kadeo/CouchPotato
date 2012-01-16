@@ -118,7 +118,7 @@ class Updater(rss, SimplePlugin):
                     handle = open(self.historyFile, "r")
                     lineList = handle.readlines()
                     handle.close()
-                    self.version = lineList[-1].replace('RuudBurger-CouchPotato-', '').replace('.tar.gz', '')
+                    self.version = lineList[-1].replace('kadeo-CouchPotato-', '').replace('.tar.gz', '')
 
         return self.version
 
@@ -134,7 +134,7 @@ class Updater(rss, SimplePlugin):
             self.updateAvailable = self.checkForUpdateWindows()
         else:
             update = self.checkGitHubForUpdate()
-            latest_commit = update.get('name').replace('RuudBurger-CouchPotato-', '').replace('.tar.gz', '')
+            latest_commit = update.get('name').replace('kadeo-CouchPotato-', '').replace('.tar.gz', '')
 
             if self.hasGit() and self.isRepo():
                 self.updateAvailable = latest_commit not in self.version
