@@ -59,7 +59,7 @@ class newzbin(nzbBase):
             'searchaction': 'Search',
             'u_url_posts_only': '0',
             'u_show_passworded': '0',
-            'q_url': 'imdb.com/title/' + movie.imdb,
+            'q_url': 'imdb.fr/title/' + movie.imdb,
             'sort': 'ps_totalsize',
             'order': 'asc',
             'u_post_results_amt': '100',
