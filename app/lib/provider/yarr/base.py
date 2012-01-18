@@ -112,8 +112,13 @@ class nzbBase(rss):
             return filter(None, re.split('\W+', text.lower()))
 
         nzbWords = get_words(item.name)
-        requiredWords = get_words(self.config.get('global', 'requiredWords'))
-        missing = set(requiredWords) - set(nzbWords)
+        requiredWords = self.config.get('global', 'requiredWords').split(',')
+        # missing = set(requiredWords) - set(nzbWords)
+        missing = True
+        for word in requiredWords:
+            if word.strip() and word.strip().lower() in nzbWords:
+                missing = False
+        
         if missing:
             log.info("NZB '%s' misses the following required words: %s" %
                             (item.name, ", ".join(missing)))
