@@ -120,7 +120,7 @@ class nzbBase(rss):
                 missing = False
         
         if missing:
-            log.info("NZB '%s' misses the following required words" %
+            log.info("NZB '%s' misses the required words" %
                             (item.name))
             return False
 
