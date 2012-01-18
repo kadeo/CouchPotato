@@ -104,9 +104,9 @@ class nzbBase(rss):
     def isCorrectMovie(self, item, movie, qualityType, imdbResults = False, singleCategory = False):
 
         # Ignore already added.
-        if self.alreadyTried(item, movie.id):
-            log.info('Already tried this one, ignored: %s' % item.name)
-            return False
+        #if self.alreadyTried(item, movie.id):
+        #    log.info('Already tried this one, ignored: %s' % item.name)
+        #    return False
 
         def get_words(text):
             return filter(None, re.split('\W+', text.lower()))
